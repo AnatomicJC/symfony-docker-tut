@@ -15,6 +15,9 @@ services:
     volumes:
       - database:/var/lib/mysql
   php:
+    user: "${UID}:${GID}"
+    environment:
+      - HOME=/tmp
     container_name: php
     build:
       context: ./php
