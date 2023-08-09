@@ -13,7 +13,7 @@ services:
     ports:
       - '4306:3306'
     volumes:
-      - ./mysql:/var/lib/mysql
+      - database:/var/lib/mysql
   php:
     container_name: php
     build:
@@ -35,3 +35,6 @@ services:
     depends_on:
       - php
       - database
+
+volumes:
+  database:

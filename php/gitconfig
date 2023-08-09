@@ -1,0 +1,5 @@
+[safe]
+        directory = /var/www/symfony_docker
+[user]
+        email = you@example.com
+        name = Your Name
